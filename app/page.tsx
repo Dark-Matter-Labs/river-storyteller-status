@@ -12,8 +12,10 @@ const TsenwenRiver = {
 
 export default async function Home() {
   const data = await getTsenwenRiverStatus();
-  // checking status of TsenwenRiver
-  TsenwenRiver.status = true; // to be replaced with actual status
+  // update TsenwenRiver status
+  // console.log({data});
+  TsenwenRiver.status = (data.status == 1)?true:false;
+  // console.log(TsenwenRiver.status);
 
   return (
     <main className="center">
